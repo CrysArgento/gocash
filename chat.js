@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io('gs://nifty-canyon-304318.appspot.com');
 
 const messageForm = document.querySelector('#message-form');
 const messageInput = document.querySelector('#message-input');
