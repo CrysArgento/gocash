@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tokenomics Creation</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC3U1AuZCH1F-LtlJ5Nf6CgUowvOUyPTUM",
+        authDomain: "nifty-canyon-304318.firebaseapp.com",
+        projectId: "nifty-canyon-304318",
+        storageBucket: "nifty-canyon-304318.appspot.com",
+        messagingSenderId: "163958925667",
+        appId: "1:163958925667:web:dcd364087dd524b87acb56",
+        measurementId: "G-WXZRDB2FZR"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/x-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/x-icon/favicon-16x16.png">
+    <link rel="manifest" href="images/x-icon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" /><script type="text/javascript" src="formulario.js"></script>
+  </head>
+   <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="images/x-icon/favicon-32x32.png" alt="logo"/>
+          </a>
+        </div>
+        <div class="menu">
+          <a
+            href="https://www.facebook.com/GoCashOk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/header/facebook.png" alt="Facebook" width="35" height="35"/>
+          </a>
+          <a
+            href="https://t.me/GoCashArgentina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/header/telegram.png" alt="Telegram" width="30" height="30"/>
+          </a>
+          
+          <button class="wallet-btn btn" id="connectWallet">
+            <span>Connect Wallet</span>
+          <button class="btn" id="Profile">
+              <span><a href="perfil.html">Perfil</a>
+              </span>
+              
+
+          </button>
+        </div>
+      </div>
+    </header>
+   <button class="btn" onclick="abrirFormulario()"> Unirse a salas de cambio </button>
+    <section class="container">
+      <div class="owner-status"></div>
+      <div class="countdown">
+        <h1>Cambios sin limite</h1>
+               
+        <p>Cambie directamente con personas reales verificadas y de su zona. Fácil, seguro y rápido.</p>
+        <a href="https://t.me/GoCashArgentina" target="_blank" rel="noopener noreferrer" class="hero-btn btn"
+          ><span>Uneté a nuestra comunidad de telegram para ver novedades o resolver dudas</span>
+        </a>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
