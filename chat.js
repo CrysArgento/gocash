@@ -1,4 +1,4 @@
-const socket = io('https://nifty-canyon-304318-default-rtdb.firebaseio.com/');
+const socket = io('https://nifty-canyon-304318-default-rtdb.firebaseio.com');
 
 const messageForm = document.querySelector('#message-form');
 const messageInput = document.querySelector('#message-input');
