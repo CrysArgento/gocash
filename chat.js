@@ -38,7 +38,7 @@ messagesRef.on("child_added", function(snapshot) {
   var message = snapshot.val();
   
   // Agrega el mensaje a la lista de mensajes
-  var messageList = document.getElementById("message-list");
+  var messageList = document.getElementById("message.list");
   var messageListItem = document.createElement("li");
   messageListItem.innerText = message.sender + ": " + message.text;
   messageList.appendChild(messageListItem);
