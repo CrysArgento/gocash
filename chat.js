@@ -1,19 +1,34 @@
-const socket = io('https://nifty-canyon-304318-default-rtdb.firebaseio.com');
+// Configurar Firebase
+var config = {
+  apiKey: "AIzaSyC3U1AuZCH1F-LtlJ5Nf6CgUowvOUyPTUM",
+  authDomain: "nifty-canyon-304318.firebaseapp.com",
+  databaseURL: "https://nifty-canyon-304318-default-rtdb.firebaseio.com",
+  storageBucket: "nifty-canyon-304318.appspot.com"
+};
 
-const messageForm = document.querySelector('#message-form');
-const messageInput = document.querySelector('#message-input');
-const messages = document.querySelector('#messages');
+firebase.initializeApp(config);
 
-messageForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const message = messageInput.value.trim();
-  if (message === '') return;
-  socket.emit('chatMessage', message);
-  messageInput.value = '';
+// Obtener una referencia a la base de datos de Firebase
+var database = firebase.database();
+
+// Obtener una referencia al formulario y al campo de entrada del mensaje
+var messageForm = document.getElementById('message-form');
+var messageInput = document.getElementById('message-input');
+
+// Escuchar los cambios en los mensajes del chat
+database.ref('messages').on('child_added', function(snapshot) {
+  var message = snapshot.val();
+  var messageElement = document.createElement('div');
+  messageElement.textContent = message.text;
+  document.getElementById('messages').appendChild(messageElement);
 });
 
-socket.on('chatMessage', message => {
-  const messageElement = document.createElement('div');
-  messageElement.innerText = message;
-  messages.appendChild(messageElement);
+// Enviar un mensaje al chat
+messageForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  var message = messageInput.value;
+  messageInput.value = '';
+  database.ref('messages').push({
+    text: message
+  });
 });
