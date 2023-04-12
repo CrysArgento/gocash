@@ -32,3 +32,14 @@ messageForm.addEventListener('submit', function(event) {
     text: message
   });
 });
+// Agrega un listener para el evento "child_added" que se dispara cada vez que se agrega un nuevo mensaje a la lista
+messagesRef.on("child_added", function(snapshot) {
+  // Obtiene los datos del mensaje que se ha agregado
+  var message = snapshot.val();
+  
+  // Agrega el mensaje a la lista de mensajes
+  var messageList = document.getElementById("message-list");
+  var messageListItem = document.createElement("li");
+  messageListItem.innerText = message.sender + ": " + message.text;
+  messageList.appendChild(messageListItem);
+});
