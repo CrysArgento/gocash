@@ -1,3 +1,3 @@
 function abrirFormulario() {
-	const ventana = window.open('salas.html', 'salas', 'width=500,height=500');
+	const ventana = window.open('mixer.html', 'salas', 'width=500,height=500');
 }
