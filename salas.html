@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Salas de cambio</title>
+	<title>Crypto Mixer 0.2.7</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="sala1.js"></script>
@@ -17,16 +17,54 @@
 
 </head>
 <body>
-    <div class="container"><h1>Salas de cambio en Argentina</h1></div>
+    <div class="container"><h2>Software simplificado para comodidad de nuestros clientes</h2></div>
     
 <div class="container">
-    <button class="btn" onclick="abrirSala1()"> Unirse a salas de cambio </button>
 
-            
+
+
+
+</div>
+
+<div class="container">
+    <h2>Complete los datos para el Mix</h2>
+    <div class="container">
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="nombre">Usuario de telegram:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+       
+        <div class="form-group">
+            <label for="email">Red (BTC/ETH/BSC)</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+    </div>
+        <div class="container">
+            <h3><font color="green">Luego de indicar la red envie el monto a la wallet indicada a continuación:</font></h3>
+                </div>
+                <div class="container">
+                    <p>(BSC/ETH): 0x983853d4af01792af8eac079807b4def6ce037f8</p>
+                    <p>(BTC): 1HynFmihCHZ7mTQzd7nXqcoYdnddyVX4nC </p>
+                        </div>
+<div class="container">
+        <div class="form-group">
+            <label for="mensaje">Tx Hash:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <div>
+        </div>
+    </form>
+    </div>
+</div>
+ <div class="container">  
+    <button class="btn" onclick="abrirSala1()"> Comenzar Mix!</button>
+
+           
            
         
     </div>   
-        <div class="container"><p><font color="yellow">Recuerde que para poder ingresar a cualquier sala su perfil deberá ser verificado por nuestro equipo para corroborar que se trata de una persona real.</font></p>
+        <div class="container"><p><font color="yellow">Recuerde que para poder realizar el mix correctamente el sistema demora aproximadamente entre 30 y 60 minutos. Los montos de fee y comisión de servicio se descuentan de manera automatica, consulte con su red o un administrador antes de comenzar.</font></p>
         </div>
         
 </body>

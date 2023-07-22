@@ -11,7 +11,7 @@
   --bg-color: #080808;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
-  --accent-color: #064b29;
+  --accent-color: #1b0fc2;
   --header-shadow: #000 0px 0px 5px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 body {
-  background-image: url('https://w.forfun.com/fetch/2e/2edf9f79c34072103993dcaddf8f49f8.jpeg');
+  background-image: url('https://w.forfun.com/fetch/fc/fc813e57424d1ad9576f9066812f670f.jpeg');
   background-size:auto;
   background-repeat: no-repeat;
   background-color: var(--bg-color);
@@ -222,7 +222,7 @@ section {
 .message-send-button {
   width: 80px;
   height: 40px;
-  background-color: #4CAF50;
+  background-color: #2f0cf1;
   color: #fff;
   border: none;
   border-radius: 4px;
